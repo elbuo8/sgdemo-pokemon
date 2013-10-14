@@ -1,0 +1,17 @@
+{
+  "name": "sgdemo",
+  "version": "0.0.0",
+  "description": "Blah",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Yamil Asusta (elbuo8)",
+  "license": "MIT",
+  "dependencies": {
+    "matador": "~1.2.1",
+    "prerender-node": "~0.1.0",
+    "socket.io": "~0.9.16"
+  }
+}
