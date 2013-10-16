@@ -10,6 +10,20 @@ block content
     canvas.height = window.innerHeight;
     document.body.appendChild(canvas);
     var mails = [];
+    var socket = io.connect();
+    var gameLoop = null;
+
+    /*
+    taken from http://www.gizma.com/easing/
+    @t - current Time
+    @b - start value
+    @c - change in value
+    @d - duration
+
+    */
+    easeIn = function (t, b, c, d) {
+      return c*t/d + b;
+    }
 
     render = function () {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -21,15 +35,30 @@ block content
     }
 
     update = function () {
-      var i = mails.length
+      var i = mails.length;
+      var exit = false;
       while (i--) {
-        mails[i].x -= (monster.x - mails[i].x)*0.01;
-        mails[i].y += (monster.y - mails[i].y)*0.01;
-        if (mails[i].x >= monster.x && mails[i].y >= monster.y) {
-          console.log('damage');
+        var currentTime = new Date().getTime()/1000-mails[i].created;
+        mails[i].x = easeIn(currentTime, 0, monster.x + monster.w/2, 1.2);
+        mails[i].y = easeIn(currentTime, window.innerHeight-(window.innerHeight*0.30), monster.y-monster.h, 1.2);
+        if (mails[i].x >= monster.x + monster.w/2 && mails[i].y >= monster.y - monster.h) {
+          var parse = mails.splice(i)[0];
+          monster.life -= parse.damage;
+          if (monster.life < 0) {
+            parse.killed = 'You killed the monster!';
+            clearInterval(gameLoop);
+            ctx.clearRect(monster.x, monster.y, monster.w, monster.h);
+            exit = true;
+          }
+          socket.emit('damage', {email: parse.email, damage: parse.damage, killed: parse.killed || 'Almost there brah!'});
+          if (exit) {
+            break;
+          }
         }
       }
-      render();
+      if (!exit) {
+        render();
+      }
     }
 
     var monster = {
@@ -38,13 +67,12 @@ block content
       w: window.innerWidth*0.40,
       h: window.innerHeight*.50,
       image: new Image(),
-      life: 30
+      life: 0.1
     };
     monster.image.src = 'http://localhost:3000/images/charizard.gif'
     //When Monster is loaded, I can attack him
     monster.image.onload = function () {
-      setInterval(update, 10)
-      var socket = io.connect();
+      gameLoop = setInterval(update, 10);
       socket.emit('join game', window.location.pathname.split('/')[2]);
       socket.on('attack', function (email) {
         mail = {
@@ -54,9 +82,9 @@ block content
           h: window.innerHeight*0.05,
           image: new Image(),
           email: email,
-          damage: Math.random() * (5 - 2) + 2
+          damage: Math.random() * (5 - 2) + 2,
+          created: new Date().getTime()/1000
         }
-        console.log(mail);
         mail.image.src = 'http://localhost:3000/images/mail.png'
         mail.image.onload = function () {
           mails.push(mail);
