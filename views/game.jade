@@ -28,6 +28,8 @@ block content
     render = function () {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       ctx.drawImage(monster.image, monster.x, monster.y, monster.w, monster.h);
+      ctx.font = 'italic 40pt calibri';
+      ctx.fillText(Math.ceil(monster.life).toString(), 40, 40);
       for(var i = 0; i < mails.length; i++) {
         var mail = mails[i];
         ctx.drawImage(mail.image, mail.x, mail.y, mail.w, mail.h);
@@ -67,7 +69,7 @@ block content
       w: window.innerWidth*0.40,
       h: window.innerHeight*.50,
       image: new Image(),
-      life: 0.1
+      life: parseInt(window.location.pathname.split('/')[2], 10)
     };
     monster.image.src = 'http://localhost:3000/images/charizard.gif'
     //When Monster is loaded, I can attack him

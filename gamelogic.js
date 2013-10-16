@@ -8,6 +8,7 @@ module.exports = function (app) {
       app.get('io').sockets.in(id).emit('attack', 'yamil.asusta@upr.edu');
     });
     socket.on('damage', function (mail) {
+      /*
       sendgrid.send({
         to: mail.email,
         from: 'yamil.asusta@upr.edu',
@@ -18,6 +19,7 @@ module.exports = function (app) {
           console.log(e);
         }
       });
+      */
     });
   });
 };
