@@ -71,7 +71,7 @@ block content
       image: new Image(),
       life: parseInt(window.location.pathname.split('/')[2], 10)
     };
-    monster.image.src = 'http://localhost:3000/images/charizard.gif'
+    monster.image.src = '/images/charizard.gif'
     //When Monster is loaded, I can attack him
     monster.image.onload = function () {
       gameLoop = setInterval(update, 10);
@@ -87,7 +87,7 @@ block content
           damage: Math.random() * (5 - 2) + 2,
           created: new Date().getTime()/1000
         }
-        mail.image.src = 'http://localhost:3000/images/mail.png'
+        mail.image.src = '/images/mail.png'
         mail.image.onload = function () {
           mails.push(mail);
           render(); //remove later
