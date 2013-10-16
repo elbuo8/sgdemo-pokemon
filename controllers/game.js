@@ -4,7 +4,7 @@ module.exports = function (app) {
       res.render('game');
     },
     attack: function (req, res) {
-      console.log(req.body);
+      app.get('io').sockets.in(req.body.subject).emit('attack', JSON.parse(req.body.envelope).from);
     }
   };
 };
