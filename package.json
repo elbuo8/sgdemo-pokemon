@@ -1,17 +1,13 @@
 {
-  "name": "sgdemo",
-  "version": "0.0.0",
-  "description": "Blah",
-  "main": "server.js",
+  "name": "application-name",
+  "version": "0.0.1",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node app"
   },
-  "author": "Yamil Asusta (elbuo8)",
-  "license": "MIT",
   "dependencies": {
-    "matador": "~1.2.1",
-    "prerender-node": "~0.1.0",
+    "express": "3.1.0",
+    "jade": "*",
     "socket.io": "~0.9.16"
   }
 }

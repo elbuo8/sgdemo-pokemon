@@ -1,0 +1,67 @@
+extends layout
+
+block content
+
+  script(src='/socket.io/socket.io.js')
+  script.
+    var canvas = document.createElement('canvas');
+    var ctx = canvas.getContext('2d');
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    document.body.appendChild(canvas);
+    var mails = [];
+
+    render = function () {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.drawImage(monster.image, monster.x, monster.y, monster.w, monster.h);
+      for(var i = 0; i < mails.length; i++) {
+        var mail = mails[i];
+        ctx.drawImage(mail.image, mail.x, mail.y, mail.w, mail.h);
+      }
+    }
+
+    update = function () {
+      var i = mails.length
+      while (i--) {
+        mails[i].x -= (monster.x - mails[i].x)*0.01;
+        mails[i].y += (monster.y - mails[i].y)*0.01;
+        if (mails[i].x >= monster.x && mails[i].y >= monster.y) {
+          console.log('damage');
+        }
+      }
+      render();
+    }
+
+    var monster = {
+      x: window.innerWidth-(window.innerWidth*0.60),
+      y: 0,
+      w: window.innerWidth*0.40,
+      h: window.innerHeight*.50,
+      image: new Image(),
+      life: 30
+    };
+    monster.image.src = 'http://localhost:3000/images/charizard.gif'
+    //When Monster is loaded, I can attack him
+    monster.image.onload = function () {
+      setInterval(update, 10)
+      var socket = io.connect();
+      socket.emit('join game', window.location.pathname.split('/')[2]);
+      socket.on('attack', function (email) {
+        mail = {
+          x: 0,
+          y: window.innerHeight-(window.innerHeight*0.30),
+          w: window.innerWidth*0.04,
+          h: window.innerHeight*0.05,
+          image: new Image(),
+          email: email,
+          damage: Math.random() * (5 - 2) + 2
+        }
+        console.log(mail);
+        mail.image.src = 'http://localhost:3000/images/mail.png'
+        mail.image.onload = function () {
+          mails.push(mail);
+          render(); //remove later
+        };
+      });
+    }
+
