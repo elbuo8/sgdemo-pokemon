@@ -41,8 +41,8 @@ block content
       var exit = false;
       while (i--) {
         var currentTime = new Date().getTime()/1000-mails[i].created;
-        mails[i].x = easeIn(currentTime, 0, monster.x + monster.w/2, 1.2);
-        mails[i].y = easeIn(currentTime, window.innerHeight-(window.innerHeight*0.30), monster.y-monster.h, 1.2);
+        mails[i].x = easeIn(currentTime, 0, monster.x + monster.w/2, 1.5);
+        mails[i].y = easeIn(currentTime, window.innerHeight-(window.innerHeight*0.30), monster.y-monster.h, 1.5);
         if (mails[i].x >= monster.x + monster.w/2 && mails[i].y >= monster.y - monster.h) {
           var parse = mails.splice(i)[0];
           monster.life -= parse.damage;
