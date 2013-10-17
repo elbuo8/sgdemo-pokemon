@@ -32,7 +32,7 @@ app.configure('production', function () {
 require('./routes')(app);
 
 var server = http.createServer(app);
-app.set('io', require('socket.io').listen(server));
+app.set('io', require('socket.io').listen(server, {log: false}));
 server.listen(app.get('port'), function () {
   console.log("Express server listening on port " + app.get('port'));
 });

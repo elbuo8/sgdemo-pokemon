@@ -5,6 +5,7 @@ module.exports = function (app) {
     },
     attack: function (req, res) {
       app.get('io').sockets.in(req.body.subject).emit('attack', JSON.parse(req.body.envelope).from);
+      res.send(200);
     }
   };
 };
