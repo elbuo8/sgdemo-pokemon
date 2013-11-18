@@ -1,7 +1,7 @@
 module.exports = function (app) {
   return {
     gameview: function (req, res) {
-      res.render('game');
+      res.render('game', {lifepoints: req.param('lifepoints')});
     },
     attack: function (req, res) {
       console.log(req.body);
