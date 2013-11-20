@@ -2,7 +2,7 @@ extends layout
 
 block content
   center
-    h1 Email - inbound@sgdemo.bymail.in   
+    h1 Email - inbound@sgdemo.bymail.in
     h1 Subject - #{lifepoints}
 
   script(src='/socket.io/socket.io.js')
@@ -31,6 +31,7 @@ block content
     render = function () {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       ctx.drawImage(monster.image, monster.x, monster.y, monster.w, monster.h);
+      ctx.drawImage(sendgrid.image, sendgrid.x, sendgrid.y, sendgrid.w, sendgrid.h);
       ctx.font = 'italic 40pt calibri';
       ctx.fillText(Math.ceil(monster.life).toString(), 40, 40);
       for(var i = 0; i < mails.length; i++) {
@@ -65,16 +66,23 @@ block content
         render();
       }
     }
-
+    var sendgrid = {
+      x: 0,
+      y: window.innerHeight-(window.innerHeight*0.50),
+      w: window.innerWidth*0.20,
+      h: window.innerHeight*0.30,
+      image: new Image()
+    };
+    sendgrid.image.src = '/images/sglogo.png';
     var monster = {
-      x: window.innerWidth-(window.innerWidth*0.60),
+      x: window.innerWidth-(window.innerWidth*0.40),
       y: 0,
-      w: window.innerWidth*0.40,
-      h: window.innerHeight*.50,
+      w: window.innerWidth*0.30,
+      h: window.innerHeight*0.50,
       image: new Image(),
       life: parseInt(window.location.pathname.split('/')[2], 10)
     };
-    monster.image.src = '/images/charizard.gif'
+    monster.image.src = '/images/charizard.gif';
     //When Monster is loaded, I can attack him
     monster.image.onload = function () {
       gameLoop = setInterval(update, 10);
