@@ -7,8 +7,10 @@ module.exports = function (app) {
       res.render('composer');
     },
     followup: function (req, res) {
+      console.log(req.body);
       emails = redis.smembers('emails', function (e, emails) {
         console.log(emails);
+        redis.del('emails');
         if (emails.length > 0) {
           sendgrid.send({
             to: emails,

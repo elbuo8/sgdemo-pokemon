@@ -19,7 +19,7 @@ module.exports = function (app) {
         'Feel free to join using http://hack.sendgrid.com/ ! Its free!<br><br>' +
         'If you need anything, anything at all feel free to reply to this email or' +
         'tweet me at <a href=\'https://twitter.com/elbuo8\'>elbuo8</a><br>' +
-        '<img src=\'http://assets3.sendgrid.com/mkt/assets/logos_brands/horizontal/PNG/logo_full_color_flat-2678d60e486518e170487044e00ff0ab.png\''
+        '<img src=\'http://assets3.sendgrid.com/mkt/assets/logos_brands/horizontal/PNG/logo_full_color_flat-2678d60e486518e170487044e00ff0ab.png\'>'
       }, function (e) {
         if (e) {
           console.log(e);
