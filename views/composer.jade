@@ -1,0 +1,6 @@
+extends layout
+
+block content
+  form(action='/followup', method='POST')
+    textarea(required, type='textarea', name='Message')
+    input(type='submit', value='Send')

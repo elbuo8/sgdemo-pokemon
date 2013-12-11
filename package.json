@@ -9,6 +9,9 @@
     "express": "3.1.0",
     "jade": "*",
     "socket.io": "~0.9.16",
-    "sendgrid": "~0.3.1"
+    "sendgrid": "~0.3.1",
+    "redis": "~0.9.1",
+    "redis-url": "~0.2.0",
+    "hiredis": "~0.1.15"
   }
 }
