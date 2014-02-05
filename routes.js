@@ -6,4 +6,8 @@ module.exports = function (app) {
   app.post('/game/', gameController.attack);
   app.get('/emails', retentionController.compose);
   app.post('/followup', retentionController.followup);
+  app.post('/webhook', function (req, res) {
+    console.log(req.body);
+    res.send(200);
+  });
 };
