@@ -5,7 +5,10 @@
 
 var express = require('express'),
   http = require('http'),
-  path = require('path');
+  path = require('path'),
+  dotenv = require('dotenv');
+
+dotenv.load();
 
 var app = express();
 
