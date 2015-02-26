@@ -11,3 +11,35 @@ Hits will be 1-5 life points
 Last hit will get notified that killed the enemy and shall be awarded with something
 
 This hacks uses nodejs, jade, html5 canvas, and of course [SendGrid!](http://sendgrid.com)
+
+## Development
+
+To run it locally, if you have [azk](http://www.azk.io/) just do:
+
+```
+$ cp .env.example .env
+```
+
+Change the environment variables inside `.env` and run:
+
+```
+$ azk start
+```
+
+If you don't have azk, after changing the environment variables, start a local redis server:
+
+```
+$ redis-server
+```
+
+Then run your app:
+
+```
+$ npm start
+```
+
+You might also want to run ngrok to test your webhook. If you have it installed, open a new terminal and run:
+
+```
+$ ngrok 3000
+```
