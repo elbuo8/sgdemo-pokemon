@@ -14,7 +14,9 @@ This hacks uses nodejs, jade, html5 canvas, and of course [SendGrid!](http://sen
 
 ## Development
 
-To run it locally, if you have [azk](http://www.azk.io/) just do:
+### Running locally with azk
+
+To run it using [azk](http://www.azk.io/) just do:
 
 ```
 $ cp .env.example .env
@@ -26,7 +28,9 @@ Change the environment variables inside `.env` and run:
 $ azk start
 ```
 
-If you don't have azk, after changing the environment variables, start a local redis server:
+### Running on your machine
+
+After changing the environment variables, start a local redis server:
 
 ```
 $ redis-server
