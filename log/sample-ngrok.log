@@ -1,0 +1,249 @@
+[2015/02/26 04:56:32 UTC] [INFO] (ngrok/log.Info:89) Reading configuration file /ngrok/ngrok.yml
+[2015/02/26 04:56:32 UTC] [INFO] (ngrok/log.(*PrefixLogger).Info:60) [client] Trusting root CAs: [assets/client/tls/ngrokroot.crt]
+[2015/02/26 04:56:32 UTC] [INFO] (ngrok/log.(*PrefixLogger).Info:60) [view] [web] Serving web interface on 0.0.0.0:4040
+[2015/02/26 04:56:32 UTC] [INFO] (ngrok/log.Info:89) Checking for update
+[2015/02/26 04:56:32 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [view] [term] Waiting for update
+[2015/02/26 04:56:32 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [ctl:1db41665] New connection to: 96.126.125.171:443
+[2015/02/26 04:56:32 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [ctl:1db41665] Writing message: {"Type":"Auth","Payload":{"Version":"2","MmVersion":"1.7","User":"rTz5WboOOSMqVrFudJ1C","Password":"","OS":"linux","Arch":"amd64","ClientId":""}}
+[2015/02/26 04:56:32 UTC] [EROR] (ngrok/log.Error:97) Error while checking for update: Post https://api.equinox.io/1/Updates: x509: failed to load system roots and no roots provided
+[2015/02/26 04:56:32 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [ctl:1db41665] Waiting to read message
+[2015/02/26 04:56:33 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [ctl:1db41665] Reading message with length: 120
+[2015/02/26 04:56:33 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [ctl:1db41665] Read message {"Type":"AuthResp","Payload":{"Version":"2","MmVersion":"1.7","ClientId":"e22e5dd7bed792a997e4a6e17457fa91","Error":""}}
+[2015/02/26 04:56:33 UTC] [INFO] (ngrok/log.(*PrefixLogger).Info:60) [client] Authenticated with server, client id: e22e5dd7bed792a997e4a6e17457fa91
+[2015/02/26 04:56:33 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [view] [term] Waiting for update
+[2015/02/26 04:56:33 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [ctl:1db41665] Writing message: {"Type":"ReqTunnel","Payload":{"ReqId":"b0d859991b5447d6","Protocol":"http+https","Hostname":"","Subdomain":"sgdemo-pokemon","HttpAuth":"","RemotePort":0}}
+[2015/02/26 04:56:33 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [ctl:1db41665] Waiting to read message
+[2015/02/26 04:56:33 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [ctl:1db41665] Reading message with length: 32
+[2015/02/26 04:56:33 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [ctl:1db41665] Read message {"Type":"ReqProxy","Payload":{}}
+[2015/02/26 04:56:33 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [ctl:1db41665] Waiting to read message
+[2015/02/26 04:56:33 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [pxy:11a3ef6d] New connection to: 96.126.125.171:443
+[2015/02/26 04:56:33 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [pxy:11a3ef6d] Writing message: {"Type":"RegProxy","Payload":{"ClientId":"e22e5dd7bed792a997e4a6e17457fa91"}}
+[2015/02/26 04:56:33 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [ctl:1db41665] Reading message with length: 128
+[2015/02/26 04:56:33 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [ctl:1db41665] Read message {"Type":"NewTunnel","Payload":{"ReqId":"b0d859991b5447d6","Url":"http://sgdemo-pokemon.ngrok.com","Protocol":"http","Error":""}}
+[2015/02/26 04:56:33 UTC] [INFO] (ngrok/log.(*PrefixLogger).Info:60) [client] Tunnel established at http://sgdemo-pokemon.ngrok.com
+[2015/02/26 04:56:33 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [ctl:1db41665] Waiting to read message
+[2015/02/26 04:56:33 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [ctl:1db41665] Reading message with length: 130
+[2015/02/26 04:56:33 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [ctl:1db41665] Read message {"Type":"NewTunnel","Payload":{"ReqId":"b0d859991b5447d6","Url":"https://sgdemo-pokemon.ngrok.com","Protocol":"https","Error":""}}
+[2015/02/26 04:56:33 UTC] [INFO] (ngrok/log.(*PrefixLogger).Info:60) [client] Tunnel established at https://sgdemo-pokemon.ngrok.com
+[2015/02/26 04:56:33 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [ctl:1db41665] Waiting to read message
+[2015/02/26 04:56:33 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [view] [term] Waiting for update
+[2015/02/26 04:56:33 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [view] [term] Waiting for update
+[2015/02/26 04:56:33 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [pxy:11a3ef6d] Waiting to read message
+[2015/02/26 04:56:53 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [ctl:1db41665] Writing message: {"Type":"Ping","Payload":{}}
+[2015/02/26 04:56:53 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [ctl:1db41665] Reading message with length: 28
+[2015/02/26 04:56:53 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [ctl:1db41665] Read message {"Type":"Pong","Payload":{}}
+[2015/02/26 04:56:53 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [ctl:1db41665] Waiting to read message
+[2015/02/26 04:57:09 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [ctl:1db41665] Reading message with length: 32
+[2015/02/26 04:57:09 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [ctl:1db41665] Read message {"Type":"ReqProxy","Payload":{}}
+[2015/02/26 04:57:09 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [ctl:1db41665] Waiting to read message
+[2015/02/26 04:57:09 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [pxy:11a3ef6d] Reading message with length: 102
+[2015/02/26 04:57:09 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [pxy:11a3ef6d] Read message {"Type":"StartProxy","Payload":{"Url":"http://sgdemo-pokemon.ngrok.com","ClientAddr":"24.12.181.150"}}
+[2015/02/26 04:57:09 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [prv:42575d49] New connection to: 192.168.50.4:49155
+[2015/02/26 04:57:09 UTC] [INFO] (ngrok/log.(*PrefixLogger).Info:60) [prv:42575d49] Joined with connection pxy:11a3ef6d
+[2015/02/26 04:57:09 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [view] [term] Waiting for update
+[2015/02/26 04:57:09 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [view] [term] [http] Got HTTP update
+[2015/02/26 04:57:09 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [view] [term] Waiting for update
+[2015/02/26 04:57:09 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [pxy:76a492f7] New connection to: 96.126.125.171:443
+[2015/02/26 04:57:09 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [pxy:76a492f7] Writing message: {"Type":"RegProxy","Payload":{"ClientId":"e22e5dd7bed792a997e4a6e17457fa91"}}
+[2015/02/26 04:57:09 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [prv:42575d49] Copied 3387 bytes to pxy:11a3ef6d
+[2015/02/26 04:57:09 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [prv:42575d49] Closing
+[2015/02/26 04:57:09 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [pxy:11a3ef6d] Closing
+[2015/02/26 04:57:09 UTC] [WARN] (ngrok/log.(*PrefixLogger).Warn:64) [pxy:11a3ef6d] Copied 447 bytes to prv:42575d49 before failing with error read tcp 96.126.125.171:443: use of closed network connection
+[2015/02/26 04:57:09 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [view] [term] [http] Got HTTP update
+[2015/02/26 04:57:09 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [view] [term] Waiting for update
+[2015/02/26 04:57:09 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [view] [term] Waiting for update
+[2015/02/26 04:57:09 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [pxy:76a492f7] Waiting to read message
+[2015/02/26 04:57:10 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [pxy:76a492f7] Reading message with length: 102
+[2015/02/26 04:57:10 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [pxy:76a492f7] Read message {"Type":"StartProxy","Payload":{"Url":"http://sgdemo-pokemon.ngrok.com","ClientAddr":"24.12.181.150"}}
+[2015/02/26 04:57:10 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [ctl:1db41665] Reading message with length: 32
+[2015/02/26 04:57:10 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [ctl:1db41665] Read message {"Type":"ReqProxy","Payload":{}}
+[2015/02/26 04:57:10 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [ctl:1db41665] Waiting to read message
+[2015/02/26 04:57:10 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [ctl:1db41665] Reading message with length: 32
+[2015/02/26 04:57:10 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [ctl:1db41665] Read message {"Type":"ReqProxy","Payload":{}}
+[2015/02/26 04:57:10 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [ctl:1db41665] Waiting to read message
+[2015/02/26 04:57:10 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [prv:3a55c660] New connection to: 192.168.50.4:49155
+[2015/02/26 04:57:10 UTC] [INFO] (ngrok/log.(*PrefixLogger).Info:60) [prv:3a55c660] Joined with connection pxy:76a492f7
+[2015/02/26 04:57:10 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [view] [term] Waiting for update
+[2015/02/26 04:57:10 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [view] [term] [http] Got HTTP update
+[2015/02/26 04:57:10 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [view] [term] Waiting for update
+[2015/02/26 04:57:10 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [view] [term] [http] Got HTTP update
+[2015/02/26 04:57:10 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [prv:3a55c660] Copied 397 bytes to pxy:76a492f7
+[2015/02/26 04:57:10 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [prv:3a55c660] Closing
+[2015/02/26 04:57:10 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [pxy:76a492f7] Closing
+[2015/02/26 04:57:10 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [view] [term] Waiting for update
+[2015/02/26 04:57:10 UTC] [WARN] (ngrok/log.(*PrefixLogger).Warn:64) [pxy:76a492f7] Copied 455 bytes to prv:3a55c660 before failing with error read tcp 96.126.125.171:443: use of closed network connection
+[2015/02/26 04:57:10 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [view] [term] Waiting for update
+[2015/02/26 04:57:10 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [pxy:144aca71] New connection to: 96.126.125.171:443
+[2015/02/26 04:57:10 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [pxy:144aca71] Writing message: {"Type":"RegProxy","Payload":{"ClientId":"e22e5dd7bed792a997e4a6e17457fa91"}}
+[2015/02/26 04:57:10 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [pxy:4d7e3036] New connection to: 96.126.125.171:443
+[2015/02/26 04:57:10 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [pxy:4d7e3036] Writing message: {"Type":"RegProxy","Payload":{"ClientId":"e22e5dd7bed792a997e4a6e17457fa91"}}
+[2015/02/26 04:57:10 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [pxy:4d7e3036] Waiting to read message
+[2015/02/26 04:57:10 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [pxy:144aca71] Waiting to read message
+[2015/02/26 04:57:10 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [ctl:1db41665] Reading message with length: 32
+[2015/02/26 04:57:10 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [ctl:1db41665] Read message {"Type":"ReqProxy","Payload":{}}
+[2015/02/26 04:57:10 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [ctl:1db41665] Waiting to read message
+[2015/02/26 04:57:10 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [pxy:4d7e3036] Reading message with length: 102
+[2015/02/26 04:57:10 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [pxy:4d7e3036] Read message {"Type":"StartProxy","Payload":{"Url":"http://sgdemo-pokemon.ngrok.com","ClientAddr":"24.12.181.150"}}
+[2015/02/26 04:57:10 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [prv:35bc1b90] New connection to: 192.168.50.4:49155
+[2015/02/26 04:57:10 UTC] [INFO] (ngrok/log.(*PrefixLogger).Info:60) [prv:35bc1b90] Joined with connection pxy:4d7e3036
+[2015/02/26 04:57:10 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [view] [term] Waiting for update
+[2015/02/26 04:57:10 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [view] [term] [http] Got HTTP update
+[2015/02/26 04:57:10 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [view] [term] Waiting for update
+[2015/02/26 04:57:10 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [prv:35bc1b90] Copied 74883 bytes to pxy:4d7e3036
+[2015/02/26 04:57:10 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [prv:35bc1b90] Closing
+[2015/02/26 04:57:10 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [pxy:4d7e3036] Closing
+[2015/02/26 04:57:10 UTC] [WARN] (ngrok/log.(*PrefixLogger).Warn:64) [pxy:4d7e3036] Copied 441 bytes to prv:35bc1b90 before failing with error read tcp 96.126.125.171:443: use of closed network connection
+[2015/02/26 04:57:10 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [view] [term] Waiting for update
+[2015/02/26 04:57:10 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [view] [term] [http] Got HTTP update
+[2015/02/26 04:57:10 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [view] [term] Waiting for update
+[2015/02/26 04:57:10 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [pxy:72253c17] New connection to: 96.126.125.171:443
+[2015/02/26 04:57:10 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [pxy:72253c17] Writing message: {"Type":"RegProxy","Payload":{"ClientId":"e22e5dd7bed792a997e4a6e17457fa91"}}
+[2015/02/26 04:57:10 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [pxy:72253c17] Waiting to read message
+[2015/02/26 04:57:11 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [ctl:1db41665] Reading message with length: 32
+[2015/02/26 04:57:11 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [ctl:1db41665] Read message {"Type":"ReqProxy","Payload":{}}
+[2015/02/26 04:57:11 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [ctl:1db41665] Waiting to read message
+[2015/02/26 04:57:11 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [ctl:1db41665] Reading message with length: 32
+[2015/02/26 04:57:11 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [ctl:1db41665] Read message {"Type":"ReqProxy","Payload":{}}
+[2015/02/26 04:57:11 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [ctl:1db41665] Waiting to read message
+[2015/02/26 04:57:11 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [pxy:144aca71] Reading message with length: 102
+[2015/02/26 04:57:11 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [pxy:144aca71] Read message {"Type":"StartProxy","Payload":{"Url":"http://sgdemo-pokemon.ngrok.com","ClientAddr":"24.12.181.150"}}
+[2015/02/26 04:57:11 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [prv:5a231346] New connection to: 192.168.50.4:49155
+[2015/02/26 04:57:11 UTC] [INFO] (ngrok/log.(*PrefixLogger).Info:60) [prv:5a231346] Joined with connection pxy:144aca71
+[2015/02/26 04:57:11 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [ctl:1db41665] Reading message with length: 32
+[2015/02/26 04:57:11 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [ctl:1db41665] Read message {"Type":"ReqProxy","Payload":{}}
+[2015/02/26 04:57:11 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [ctl:1db41665] Waiting to read message
+[2015/02/26 04:57:11 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [pxy:72253c17] Reading message with length: 102
+[2015/02/26 04:57:11 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [pxy:72253c17] Read message {"Type":"StartProxy","Payload":{"Url":"http://sgdemo-pokemon.ngrok.com","ClientAddr":"24.12.181.150"}}
+[2015/02/26 04:57:11 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [view] [term] Waiting for update
+[2015/02/26 04:57:11 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [view] [term] [http] Got HTTP update
+[2015/02/26 04:57:11 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [view] [term] Waiting for update
+[2015/02/26 04:57:11 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [prv:388f369f] New connection to: 192.168.50.4:49155
+[2015/02/26 04:57:11 UTC] [INFO] (ngrok/log.(*PrefixLogger).Info:60) [prv:388f369f] Joined with connection pxy:72253c17
+[2015/02/26 04:57:11 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [pxy:634d41a5] New connection to: 96.126.125.171:443
+[2015/02/26 04:57:11 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [pxy:634d41a5] Writing message: {"Type":"RegProxy","Payload":{"ClientId":"e22e5dd7bed792a997e4a6e17457fa91"}}
+[2015/02/26 04:57:11 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [pxy:1eacc990] New connection to: 96.126.125.171:443
+[2015/02/26 04:57:11 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [pxy:1eacc990] Writing message: {"Type":"RegProxy","Payload":{"ClientId":"e22e5dd7bed792a997e4a6e17457fa91"}}
+[2015/02/26 04:57:11 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [ctl:1db41665] Reading message with length: 32
+[2015/02/26 04:57:11 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [ctl:1db41665] Read message {"Type":"ReqProxy","Payload":{}}
+[2015/02/26 04:57:11 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [ctl:1db41665] Waiting to read message
+[2015/02/26 04:57:11 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [view] [term] Waiting for update
+[2015/02/26 04:57:11 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [view] [term] [http] Got HTTP update
+[2015/02/26 04:57:11 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [view] [term] Waiting for update
+[2015/02/26 04:57:11 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [view] [term] [http] Got HTTP update
+[2015/02/26 04:57:11 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [view] [term] Waiting for update
+[2015/02/26 04:57:11 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [prv:5a231346] Copied 8508 bytes to pxy:144aca71
+[2015/02/26 04:57:11 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [prv:5a231346] Closing
+[2015/02/26 04:57:11 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [pxy:144aca71] Closing
+[2015/02/26 04:57:11 UTC] [WARN] (ngrok/log.(*PrefixLogger).Warn:64) [pxy:144aca71] Copied 453 bytes to prv:5a231346 before failing with error read tcp 96.126.125.171:443: use of closed network connection
+[2015/02/26 04:57:11 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [view] [term] Waiting for update
+[2015/02/26 04:57:11 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [prv:388f369f] Copied 211 bytes to pxy:72253c17
+[2015/02/26 04:57:11 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [prv:388f369f] Closing
+[2015/02/26 04:57:11 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [pxy:72253c17] Closing
+[2015/02/26 04:57:11 UTC] [WARN] (ngrok/log.(*PrefixLogger).Warn:64) [pxy:72253c17] Copied 447 bytes to prv:388f369f before failing with error read tcp 96.126.125.171:443: use of closed network connection
+[2015/02/26 04:57:11 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [view] [term] [http] Got HTTP update
+[2015/02/26 04:57:11 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [view] [term] Waiting for update
+[2015/02/26 04:57:11 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [view] [term] Waiting for update
+[2015/02/26 04:57:11 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [pxy:2363a3fc] New connection to: 96.126.125.171:443
+[2015/02/26 04:57:11 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [pxy:2363a3fc] Writing message: {"Type":"RegProxy","Payload":{"ClientId":"e22e5dd7bed792a997e4a6e17457fa91"}}
+[2015/02/26 04:57:11 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [pxy:35c1e3bc] New connection to: 96.126.125.171:443
+[2015/02/26 04:57:11 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [pxy:35c1e3bc] Writing message: {"Type":"RegProxy","Payload":{"ClientId":"e22e5dd7bed792a997e4a6e17457fa91"}}
+[2015/02/26 04:57:11 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [pxy:634d41a5] Waiting to read message
+[2015/02/26 04:57:11 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [pxy:1eacc990] Waiting to read message
+[2015/02/26 04:57:11 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [pxy:2363a3fc] Waiting to read message
+[2015/02/26 04:57:11 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [pxy:35c1e3bc] Waiting to read message
+[2015/02/26 04:57:12 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [pxy:634d41a5] Reading message with length: 102
+[2015/02/26 04:57:12 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [pxy:634d41a5] Read message {"Type":"StartProxy","Payload":{"Url":"http://sgdemo-pokemon.ngrok.com","ClientAddr":"24.12.181.150"}}
+[2015/02/26 04:57:12 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [prv:56bd0cc6] New connection to: 192.168.50.4:49155
+[2015/02/26 04:57:12 UTC] [INFO] (ngrok/log.(*PrefixLogger).Info:60) [prv:56bd0cc6] Joined with connection pxy:634d41a5
+[2015/02/26 04:57:12 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [view] [term] Waiting for update
+[2015/02/26 04:57:12 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [view] [term] [http] Got HTTP update
+[2015/02/26 04:57:12 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [view] [term] Waiting for update
+[2015/02/26 04:57:12 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [ctl:1db41665] Reading message with length: 32
+[2015/02/26 04:57:12 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [ctl:1db41665] Read message {"Type":"ReqProxy","Payload":{}}
+[2015/02/26 04:57:12 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [ctl:1db41665] Waiting to read message
+[2015/02/26 04:57:12 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [view] [term] [http] Got HTTP update
+[2015/02/26 04:57:12 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [view] [term] Waiting for update
+[2015/02/26 04:57:12 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [prv:56bd0cc6] Copied 18367 bytes to pxy:634d41a5
+[2015/02/26 04:57:12 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [prv:56bd0cc6] Closing
+[2015/02/26 04:57:12 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [pxy:634d41a5] Closing
+[2015/02/26 04:57:12 UTC] [WARN] (ngrok/log.(*PrefixLogger).Warn:64) [pxy:634d41a5] Copied 456 bytes to prv:56bd0cc6 before failing with error read tcp 96.126.125.171:443: use of closed network connection
+[2015/02/26 04:57:12 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [view] [term] Waiting for update
+[2015/02/26 04:57:12 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [pxy:220383d2] New connection to: 96.126.125.171:443
+[2015/02/26 04:57:12 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [pxy:220383d2] Writing message: {"Type":"RegProxy","Payload":{"ClientId":"e22e5dd7bed792a997e4a6e17457fa91"}}
+[2015/02/26 04:57:12 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [pxy:220383d2] Waiting to read message
+[2015/02/26 04:57:12 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [pxy:1eacc990] Reading message with length: 102
+[2015/02/26 04:57:12 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [ctl:1db41665] Reading message with length: 32
+[2015/02/26 04:57:12 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [ctl:1db41665] Read message {"Type":"ReqProxy","Payload":{}}
+[2015/02/26 04:57:12 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [ctl:1db41665] Waiting to read message
+[2015/02/26 04:57:12 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [pxy:1eacc990] Read message {"Type":"StartProxy","Payload":{"Url":"http://sgdemo-pokemon.ngrok.com","ClientAddr":"24.12.181.150"}}
+[2015/02/26 04:57:12 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [prv:6b33081a] New connection to: 192.168.50.4:49155
+[2015/02/26 04:57:12 UTC] [INFO] (ngrok/log.(*PrefixLogger).Info:60) [prv:6b33081a] Joined with connection pxy:1eacc990
+[2015/02/26 04:57:12 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [view] [term] Waiting for update
+[2015/02/26 04:57:12 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [view] [term] [http] Got HTTP update
+[2015/02/26 04:57:12 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [view] [term] Waiting for update
+[2015/02/26 04:57:12 UTC] [INFO] (ngrok/log.(*PrefixLogger).Info:60) [prv:6b33081a] Upgrading to websocket
+[2015/02/26 04:57:12 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [view] [term] [http] Got HTTP update
+[2015/02/26 04:57:12 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [view] [term] Waiting for update
+[2015/02/26 04:57:12 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [pxy:61baa090] New connection to: 96.126.125.171:443
+[2015/02/26 04:57:12 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [pxy:61baa090] Writing message: {"Type":"RegProxy","Payload":{"ClientId":"e22e5dd7bed792a997e4a6e17457fa91"}}
+[2015/02/26 04:57:12 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [pxy:2363a3fc] Reading message with length: 102
+[2015/02/26 04:57:12 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [pxy:2363a3fc] Read message {"Type":"StartProxy","Payload":{"Url":"http://sgdemo-pokemon.ngrok.com","ClientAddr":"24.12.181.150"}}
+[2015/02/26 04:57:12 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [pxy:1eacc990] Copied 698 bytes to prv:6b33081a
+[2015/02/26 04:57:12 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [ctl:1db41665] Reading message with length: 32
+[2015/02/26 04:57:12 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [ctl:1db41665] Read message {"Type":"ReqProxy","Payload":{}}
+[2015/02/26 04:57:12 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [ctl:1db41665] Waiting to read message
+[2015/02/26 04:57:12 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [pxy:1eacc990] Closing
+[2015/02/26 04:57:12 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [prv:6b33081a] Closing
+[2015/02/26 04:57:12 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [prv:5ba11426] New connection to: 192.168.50.4:49155
+[2015/02/26 04:57:12 UTC] [INFO] (ngrok/log.(*PrefixLogger).Info:60) [prv:5ba11426] Joined with connection pxy:2363a3fc
+[2015/02/26 04:57:12 UTC] [WARN] (ngrok/log.(*PrefixLogger).Warn:64) [prv:6b33081a] Copied 134 bytes to pxy:1eacc990 before failing with error read tcp 192.168.50.4:49155: use of closed network connection
+[2015/02/26 04:57:12 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [view] [term] Waiting for update
+[2015/02/26 04:57:12 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [view] [term] Waiting for update
+[2015/02/26 04:57:12 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [pxy:2363a3fc] Copied 380 bytes to prv:5ba11426
+[2015/02/26 04:57:12 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [pxy:2363a3fc] Closing
+[2015/02/26 04:57:12 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [prv:5ba11426] Closing
+[2015/02/26 04:57:12 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [view] [term] [http] Got HTTP update
+[2015/02/26 04:57:12 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [view] [term] Waiting for update
+[2015/02/26 04:57:12 UTC] [WARN] (ngrok/log.(*PrefixLogger).Warn:64) [prv:5ba11426] Copied 0 bytes to pxy:2363a3fc before failing with error read tcp 192.168.50.4:49155: use of closed network connection
+[2015/02/26 04:57:12 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [pxy:61baa090] Waiting to read message
+[2015/02/26 04:57:12 UTC] [WARN] (ngrok/log.(*PrefixLogger).Warn:64) [prv:5ba11426] Error reading response from server: unexpected EOF
+[2015/02/26 04:57:12 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [view] [term] Waiting for update
+[2015/02/26 04:57:12 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [pxy:46f27135] New connection to: 96.126.125.171:443
+[2015/02/26 04:57:12 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [pxy:46f27135] Writing message: {"Type":"RegProxy","Payload":{"ClientId":"e22e5dd7bed792a997e4a6e17457fa91"}}
+[2015/02/26 04:57:13 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [ctl:1db41665] Writing message: {"Type":"Ping","Payload":{}}
+[2015/02/26 04:57:13 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [pxy:46f27135] Waiting to read message
+[2015/02/26 04:57:13 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [ctl:1db41665] Reading message with length: 28
+[2015/02/26 04:57:13 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [ctl:1db41665] Read message {"Type":"Pong","Payload":{}}
+[2015/02/26 04:57:13 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [ctl:1db41665] Waiting to read message
+[2015/02/26 04:57:33 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [ctl:1db41665] Writing message: {"Type":"Ping","Payload":{}}
+[2015/02/26 04:57:33 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [ctl:1db41665] Reading message with length: 28
+[2015/02/26 04:57:33 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [ctl:1db41665] Read message {"Type":"Pong","Payload":{}}
+[2015/02/26 04:57:33 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [ctl:1db41665] Waiting to read message
+[2015/02/26 04:57:53 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [ctl:1db41665] Writing message: {"Type":"Ping","Payload":{}}
+[2015/02/26 04:57:53 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [ctl:1db41665] Reading message with length: 28
+[2015/02/26 04:57:53 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [ctl:1db41665] Read message {"Type":"Pong","Payload":{}}
+[2015/02/26 04:57:53 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [ctl:1db41665] Waiting to read message
+[2015/02/26 04:58:13 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [ctl:1db41665] Writing message: {"Type":"Ping","Payload":{}}
+[2015/02/26 04:58:13 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [ctl:1db41665] Reading message with length: 28
+[2015/02/26 04:58:13 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [ctl:1db41665] Read message {"Type":"Pong","Payload":{}}
+[2015/02/26 04:58:13 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [ctl:1db41665] Waiting to read message
+[2015/02/26 04:58:33 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [ctl:1db41665] Writing message: {"Type":"Ping","Payload":{}}
+[2015/02/26 04:58:33 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [ctl:1db41665] Reading message with length: 28
+[2015/02/26 04:58:33 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [ctl:1db41665] Read message {"Type":"Pong","Payload":{}}
+[2015/02/26 04:58:33 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [ctl:1db41665] Waiting to read message
+[2015/02/26 04:58:53 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [ctl:1db41665] Writing message: {"Type":"Ping","Payload":{}}
+[2015/02/26 04:58:53 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [ctl:1db41665] Reading message with length: 28
+[2015/02/26 04:58:53 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [ctl:1db41665] Read message {"Type":"Pong","Payload":{}}
+[2015/02/26 04:58:53 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [ctl:1db41665] Waiting to read message
+[2015/02/26 04:59:13 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [ctl:1db41665] Writing message: {"Type":"Ping","Payload":{}}
+[2015/02/26 04:59:13 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [ctl:1db41665] Reading message with length: 28
+[2015/02/26 04:59:13 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [ctl:1db41665] Read message {"Type":"Pong","Payload":{}}
+[2015/02/26 04:59:13 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [ctl:1db41665] Waiting to read message
+[2015/02/26 04:59:33 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [ctl:1db41665] Writing message: {"Type":"Ping","Payload":{}}
+[2015/02/26 04:59:33 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [ctl:1db41665] Reading message with length: 28
+[2015/02/26 04:59:33 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [ctl:1db41665] Read message {"Type":"Pong","Payload":{}}
+[2015/02/26 04:59:33 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [ctl:1db41665] Waiting to read message
+[2015/02/26 04:59:53 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [ctl:1db41665] Writing message: {"Type":"Ping","Payload":{}}
+[2015/02/26 04:59:53 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [ctl:1db41665] Reading message with length: 28
+[2015/02/26 04:59:53 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [ctl:1db41665] Read message {"Type":"Pong","Payload":{}}
+[2015/02/26 04:59:53 UTC] [DEBG] (ngrok/log.(*PrefixLogger).Debug:56) [ctl:1db41665] Waiting to read message

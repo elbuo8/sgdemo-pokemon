@@ -1,17 +1,23 @@
 {
-  "name": "application-name",
+  "name": "sgdemo-pokemon",
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "node app"
+    "start": "node app.js"
   },
   "dependencies": {
+    "active-x-obfuscator": "0.0.2",
+    "dotenv": "^0.5.1",
     "express": "3.1.0",
+    "hiredis": "~0.1.15",
     "jade": "*",
-    "socket.io": "~0.9.16",
-    "sendgrid": "~0.3.1",
     "redis": "~0.9.1",
     "redis-url": "~0.2.0",
-    "hiredis": "~0.1.15"
+    "sendgrid": "~0.3.1",
+    "socket.io": "~0.9.16",
+    "uglify-js": "^2.4.16"
+  },
+  "engines": {
+    "node": "0.10.x"
   }
 }
