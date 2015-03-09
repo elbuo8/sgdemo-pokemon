@@ -29,7 +29,7 @@ systems({
       NODE_ENV: "dev",
     },
     export_envs: {
-      HTTP_PORT: "#{azk.default_domain}:#{net.port.http}",
+      APP_URL: "#{azk.default_domain}:#{net.port.http}",
       HTTPS_PORT: "#{azk.default_domain}:#{net.port.http}"
     },
   },
@@ -42,7 +42,7 @@ systems({
   ngrok: {
     // Dependent systems
     depends: ["sgdemo-pokemon"],
-    image     : {"docker" : "gullitmiranda/docker-ngrok"},
+    image     : {"docker" : "azukiapp/ngrok"},
     // Mounts folders to assigned paths
     mounts: {
       // equivalent persistent_folders
